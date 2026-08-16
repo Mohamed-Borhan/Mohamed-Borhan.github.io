@@ -108,6 +108,10 @@ h1 em { color: var(--signal); font-family: Georgia, serif; font-weight: 400; }
 .project-diagram span { position: absolute; left: 20%; top: 29%; width: 59%; height: 1px; background: var(--signal); transform: rotate(5deg); transform-origin: left; }
 .project-card h3 { margin: 0 0 12px; color: white; font-size: 25px; line-height: 1.08; letter-spacing: -0.045em; }
 .project-card p { margin: 0; color: #9eabb2; font-size: 11px; line-height: 1.65; }
+.project-link { width: fit-content; margin-top: 18px; color: white; font: 700 9px var(--mono); letter-spacing: 0.08em; text-decoration: none; text-transform: uppercase; }
+.project-link span { display: inline-block; margin-left: 4px; color: var(--signal); transition: transform 0.25s ease; }
+.project-link:hover span { transform: translate(3px, -3px); }
+.project-link:focus-visible { outline: 2px solid var(--signal); outline-offset: 5px; }
 .tags { margin-top: auto; display: flex; flex-wrap: wrap; gap: 6px; }
 .tags span { padding: 7px 8px; border-radius: 3px; background: rgba(255, 255, 255, 0.07); color: #c5cdd2; font: 700 8px var(--mono); }
 
