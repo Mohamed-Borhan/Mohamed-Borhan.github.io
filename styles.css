@@ -40,14 +40,18 @@ h1 em { color: var(--signal); font-family: Georgia, serif; font-weight: 400; }
 .button span { color: var(--signal); }
 .text-button { padding: 10px 0; border-bottom: 1px solid var(--ink); font-size: 12px; font-weight: 800; }
 
-.status-card { position: relative; padding: 26px; border-radius: 8px; background: var(--ink); color: white; box-shadow: 20px 22px 0 var(--signal-soft); }
-.status-card::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(255, 255, 255, 0.08); pointer-events: none; }
+.status-card { position: relative; overflow: hidden; border-radius: 8px; background: var(--ink); color: white; box-shadow: 20px 22px 0 var(--signal-soft); }
+.status-card::before { content: ""; position: absolute; z-index: 3; inset: 8px; border: 1px solid rgba(255, 255, 255, 0.12); pointer-events: none; }
+.portrait-frame { position: relative; aspect-ratio: 1 / 1.03; overflow: hidden; background: #c8c9ca; }
+.portrait-frame::after { content: ""; position: absolute; inset: auto 0 0; height: 30%; background: linear-gradient(transparent, rgba(16, 24, 32, 0.22)); pointer-events: none; }
+.portrait-frame img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 18%; filter: saturate(0.94) contrast(1.02); transition: transform 0.65s cubic-bezier(0.2, 0.75, 0.2, 1); }
+.status-content { position: relative; padding: 24px 26px 26px; }
 .status-head { position: relative; display: flex; justify-content: space-between; align-items: center; color: #9ca9b2; font: 700 9px var(--mono); text-transform: uppercase; letter-spacing: 0.1em; }
 .status-head i { color: #86e0b2; font-style: normal; }
 .status-head i::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 50%; background: #4cce8b; }
-.status-card h2 { position: relative; margin: 55px 0 8px; color: white; font-size: 38px; line-height: 1.02; letter-spacing: -0.05em; }
-.status-card > p { position: relative; margin: 0; color: #97a5ad; font-size: 11px; }
-.operating-grid { position: relative; margin: 34px 0; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(255, 255, 255, 0.12); }
+.status-card h2 { position: relative; margin: 22px 0 8px; color: white; font-size: 34px; line-height: 1.02; letter-spacing: -0.05em; }
+.status-content > p { position: relative; margin: 0; color: #97a5ad; font-size: 11px; }
+.operating-grid { position: relative; margin: 22px 0; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(255, 255, 255, 0.12); }
 .operating-grid span { padding: 14px; color: #d4dadd; font: 700 9px var(--mono); text-transform: uppercase; letter-spacing: 0.08em; }
 .operating-grid span:nth-child(even) { border-left: 1px solid rgba(255, 255, 255, 0.12); }
 .operating-grid span:nth-child(n + 3) { border-top: 1px solid rgba(255, 255, 255, 0.12); }
@@ -153,6 +157,7 @@ footer p, footer > span { color: #6d7880; font: 700 9px var(--mono); text-transf
 .hero-copy > *:nth-child(4) { animation-delay: 0.32s; }
 .status-card { animation: card-enter 0.85s cubic-bezier(0.16, 0.8, 0.22, 1) 0.24s both; transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease; }
 .status-card:hover { transform: translateY(-6px) rotate(-0.35deg); box-shadow: 24px 29px 0 var(--signal-soft); }
+.status-card:hover .portrait-frame img { transform: scale(1.025); }
 .status-head i::before { animation: status-pulse 2s ease-out infinite; }
 .stat-strip div { animation: stat-enter 0.6s ease both; }
 .stat-strip div:nth-child(1) { animation-delay: 0.35s; }
