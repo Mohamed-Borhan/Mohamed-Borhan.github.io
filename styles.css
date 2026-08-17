@@ -135,22 +135,22 @@ h1 em { color: var(--signal); font-family: Georgia, serif; font-weight: 400; }
 .degree h3 { margin: 0 0 6px; font-size: 25px; letter-spacing: -0.04em; }
 .degree p { margin: 0; color: #65727a; font-size: 12px; }
 .degree strong { max-width: 260px; text-align: right; font-size: 12px; }
-.certification-section { padding: 100px 0; color: white; background: var(--ink); }
+.certification-section { padding: 78px 0; color: white; background: var(--ink); }
 .certification-inner { max-width: 1260px; margin: auto; padding: 0 30px; }
-.certification-heading { display: grid; grid-template-columns: 1.35fr .65fr; gap: 60px; align-items: end; margin-bottom: 46px; }
-.certification-heading h2 { max-width: 850px; margin: 0; color: white; font-size: clamp(38px, 5vw, 60px); line-height: 1.04; letter-spacing: -0.06em; }
+.certification-heading { display: grid; grid-template-columns: 1.35fr .65fr; gap: 50px; align-items: end; margin-bottom: 34px; }
+.certification-heading h2 { max-width: 790px; margin: 0; color: white; font-size: clamp(34px, 4.3vw, 52px); line-height: 1.04; letter-spacing: -0.06em; }
 .certification-heading p { margin: 0; color: #98a6ae; font-size: 12px; line-height: 1.7; }
-.certification-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.credential { position: relative; display: grid; grid-template-columns: 105px 1fr; gap: 25px; min-height: 205px; padding: 26px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 6px; background: #15222d; transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .25s ease, background .25s ease; }
+.certification-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.credential { position: relative; display: grid; grid-template-columns: 88px 1fr; gap: 20px; min-height: 180px; padding: 22px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 6px; background: #15222d; transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .25s ease, background .25s ease; }
 .credential:hover { transform: translateY(-6px); border-color: rgba(255,107,43,.68); background: #1b2d39; }
-.credential-featured { grid-column: 1 / -1; grid-template-columns: 150px minmax(0, 1fr); min-height: 245px; background: linear-gradient(115deg, #172832, #15222d 72%); box-shadow: inset 5px 0 var(--signal); }
-.credential-mark { display: grid; align-content: center; justify-items: center; min-height: 105px; padding: 18px 12px; border: 1px solid rgba(255,107,43,.55); border-radius: 50%; aspect-ratio: 1; }
-.credential-mark span { color: var(--signal); font: 800 28px var(--mono); letter-spacing: -.06em; }
+.credential-featured { grid-column: span 2; grid-template-columns: 118px minmax(0, 1fr); min-height: 180px; background: linear-gradient(115deg, #172832, #15222d 72%); box-shadow: inset 5px 0 var(--signal); }
+.credential-mark { display: grid; align-content: center; justify-items: center; min-height: 88px; padding: 14px 10px; border: 1px solid rgba(255,107,43,.55); border-radius: 50%; aspect-ratio: 1; }
+.credential-mark span { color: var(--signal); font: 800 24px var(--mono); letter-spacing: -.06em; }
 .credential-mark small { color: #a9b5bc; font: 700 7px var(--mono); letter-spacing: .08em; text-align: center; text-transform: uppercase; }
 .credential > div:nth-child(2) { align-self: center; }
 .credential-issuer { color: var(--signal-soft); font: 700 8px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
-.credential h3 { margin: 8px 0 10px; color: white; font-size: 24px; line-height: 1.05; letter-spacing: -.04em; }
-.credential-featured h3 { font-size: clamp(30px, 4vw, 46px); }
+.credential h3 { margin: 8px 0 10px; color: white; font-size: 21px; line-height: 1.05; letter-spacing: -.04em; }
+.credential-featured h3 { font-size: clamp(28px, 3.2vw, 38px); }
 .credential p { max-width: 660px; margin: 0; color: #98a6ae; font-size: 10px; line-height: 1.65; }
 .credential > b { position: absolute; top: 18px; right: 20px; color: rgba(255,255,255,.22); font: 700 9px var(--mono); }
 
@@ -223,6 +223,8 @@ footer p, footer > span { color: #6d7880; font: 700 9px var(--mono); text-transf
   .job ul { display: none; }
   .project-heading, .experience-heading { align-items: flex-start; flex-direction: column; }
   .certification-heading { grid-template-columns: 1fr; gap: 20px; align-items: start; }
+  .certification-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .credential-featured { grid-column: 1 / -1; }
   .contact-section { grid-template-columns: 1fr; }
   .project-heading p, .experience-heading p { max-width: 550px; }
 }
@@ -240,8 +242,8 @@ footer p, footer > span { color: #6d7880; font: 700 9px var(--mono); text-transf
   .intro-columns, .capability-grid { grid-template-columns: 1fr; }
   .certification-inner { padding: 0 18px; }
   .certification-grid { grid-template-columns: 1fr; }
-  .credential, .credential-featured { grid-column: 1; grid-template-columns: 80px 1fr; gap: 18px; min-height: 190px; padding: 22px; }
-  .credential-mark { min-height: 80px; padding: 12px 8px; }
+  .credential, .credential-featured { grid-column: 1; grid-template-columns: 72px 1fr; gap: 16px; min-height: 165px; padding: 18px; }
+  .credential-mark { min-height: 72px; padding: 10px 7px; }
   .credential-mark span { font-size: 21px; }
   .job { grid-template-columns: 32px 1fr; }
   .job > p { grid-column: 2; }
