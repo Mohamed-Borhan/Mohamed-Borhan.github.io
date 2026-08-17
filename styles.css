@@ -112,6 +112,10 @@ h1 em { color: var(--signal); font-family: Georgia, serif; font-weight: 400; }
 .project-link span { display: inline-block; margin-left: 4px; color: var(--signal); transition: transform 0.25s ease; }
 .project-link:hover span { transform: translate(3px, -3px); }
 .project-link:focus-visible { outline: 2px solid var(--signal); outline-offset: 5px; }
+.featured-project-link { width: 100%; min-height: 50px; margin-top: 22px; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 18px; border-radius: 4px; background: var(--signal); color: var(--ink); font-size: 11px; letter-spacing: .06em; transition: transform .25s ease, background .25s ease, box-shadow .25s ease; }
+.featured-project-link span { color: var(--ink); font-size: 18px; }
+.featured-project-link:hover { transform: translateY(-3px); background: var(--signal-soft); box-shadow: 0 12px 28px rgba(0,0,0,.22); }
+.featured-project-link:focus-visible { outline-color: white; }
 .tags { margin-top: auto; display: flex; flex-wrap: wrap; gap: 6px; }
 .tags span { padding: 7px 8px; border-radius: 3px; background: rgba(255, 255, 255, 0.07); color: #c5cdd2; font: 700 8px var(--mono); }
 
