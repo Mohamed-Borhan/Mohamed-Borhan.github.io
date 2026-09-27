@@ -75,6 +75,16 @@ h1 em { color: var(--signal); font-family: Georgia, serif; font-weight: 400; }
 .experience-section { border-top: 1px solid var(--line); }
 .experience-heading { margin-bottom: 45px; display: flex; justify-content: space-between; align-items: end; gap: 50px; }
 .experience-heading p { max-width: 300px; margin: 0; color: #66727a; font-size: 11px; line-height: 1.6; }
+.operations-highlight { margin-bottom: 42px; padding: 28px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; border-radius: 6px; background: var(--ink); color: white; }
+.operations-highlight-copy { align-self: center; }
+.operations-highlight h3 { margin: 10px 0 12px; max-width: 430px; font-size: 27px; line-height: 1.05; letter-spacing: -.04em; }
+.operations-highlight p { margin: 0; color: #9eabb2; font-size: 11px; line-height: 1.7; }
+.operations-metrics { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(255,255,255,.12); }
+.operations-metrics div { min-height: 105px; padding: 17px; display: flex; flex-direction: column; justify-content: center; gap: 7px; }
+.operations-metrics div:nth-child(even) { border-left: 1px solid rgba(255,255,255,.12); }
+.operations-metrics div:nth-child(n + 3) { border-top: 1px solid rgba(255,255,255,.12); }
+.operations-metrics strong { color: var(--signal); font: 800 18px var(--mono); }
+.operations-metrics span { color: #b6c1c7; font-size: 8px; font-weight: 700; line-height: 1.45; letter-spacing: .06em; text-transform: uppercase; }
 .timeline { border-top: 1px solid var(--ink); }
 .job { display: grid; grid-template-columns: 45px 1.1fr 1fr 1fr; gap: 26px; padding: 28px 0; border-bottom: 1px solid var(--line); }
 .job-marker { position: relative; }
@@ -221,6 +231,7 @@ footer p, footer > span { color: #6d7880; font: 700 9px var(--mono); text-transf
   .section { grid-template-columns: 1fr; gap: 35px; }
   .intro-columns, .project-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 390px; }
+  .operations-highlight { grid-template-columns: 1fr; }
   .job { grid-template-columns: 38px 1fr 1fr; }
   .job ul { display: none; }
   .project-heading, .experience-heading { align-items: flex-start; flex-direction: column; }
@@ -243,6 +254,10 @@ footer p, footer > span { color: #6d7880; font: 700 9px var(--mono); text-transf
   .stat-strip div { padding: 18px; }
   .stat-strip strong { font-size: 27px; }
   .intro-columns, .capability-grid { grid-template-columns: 1fr; }
+  .operations-highlight { padding: 20px; }
+  .operations-metrics { grid-template-columns: 1fr; }
+  .operations-metrics div:nth-child(even) { border-left: 0; }
+  .operations-metrics div + div { border-top: 1px solid rgba(255,255,255,.12); }
   .certification-inner { padding: 0 18px; }
   .certification-grid { grid-template-columns: 1fr; }
   .credential, .credential-featured, .credential:last-child { grid-column: 1; grid-template-columns: 72px 1fr; gap: 16px; min-height: 165px; padding: 18px; }
