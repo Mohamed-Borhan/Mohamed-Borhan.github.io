@@ -40,9 +40,11 @@ nav { display: flex; gap: 32px; font-size: 11px; font-weight: 700; }
 h1 { max-width: 850px; margin: 0 0 28px; font-size: clamp(54px, 7vw, 88px); line-height: 0.94; letter-spacing: -0.075em; font-weight: 720; }
 h1 em { color: var(--signal); font-family: Georgia, serif; font-weight: 400; }
 .hero-copy > p { max-width: 700px; color: #53606a; font-size: 18px; line-height: 1.65; }
-.hero-actions { margin-top: 31px; display: flex; align-items: center; gap: 25px; }
+.hero-actions { margin-top: 31px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
 .button { padding: 14px 18px; display: inline-flex; gap: 28px; border-radius: 4px; background: var(--ink); color: white; font-size: 12px; font-weight: 800; }
 .button span { color: var(--signal); }
+.resume-button { padding: 13px 17px; display: inline-flex; gap: 22px; border: 1px solid var(--ink); border-radius: 4px; background: transparent; font-size: 12px; font-weight: 800; }
+.resume-button span { color: var(--signal); }
 .text-button { padding: 10px 0; border-bottom: 1px solid var(--ink); font-size: 12px; font-weight: 800; }
 
 .status-card { position: relative; overflow: hidden; border-radius: 8px; background: var(--ink); color: white; box-shadow: 20px 22px 0 var(--signal-soft); }
@@ -215,10 +217,12 @@ footer p, footer > span { color: #6d7880; font: 700 9px var(--mono); text-transf
 .stat-strip div:nth-child(2) { animation-delay: 0.42s; }
 .stat-strip div:nth-child(3) { animation-delay: 0.49s; }
 .stat-strip div:nth-child(4) { animation-delay: 0.56s; }
-.button, .text-button, .contact-link, .contact-details a, nav a { transition: color 0.2s ease, background 0.2s ease, transform 0.25s ease, border-color 0.2s ease; }
+.button, .resume-button, .text-button, .contact-link, .contact-details a, nav a { transition: color 0.2s ease, background 0.2s ease, transform 0.25s ease, border-color 0.2s ease; }
 .button:hover { transform: translateY(-3px); background: var(--steel); }
+.resume-button:hover { transform: translateY(-3px); border-color: var(--signal); background: var(--white); }
 .button:hover span, .contact-link:hover span, .contact-details a:hover span { transform: translate(3px, -3px); }
-.button span, .contact-link span, .contact-details a span { display: inline-block; transition: transform 0.25s ease; }
+.button span, .resume-button span, .contact-link span, .contact-details a span { display: inline-block; transition: transform 0.25s ease; }
+.resume-button:hover span { transform: translateY(3px); }
 .project-card { transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease, background 0.3s ease, box-shadow 0.4s ease; }
 .project-card:hover { transform: translateY(-10px); border-color: rgba(255, 107, 43, 0.62); background: #1b2d39; box-shadow: 0 22px 55px rgba(0, 0, 0, 0.2); }
 .project-card:hover .project-diagram { animation: grid-drift 1.5s linear infinite; border-color: rgba(124, 200, 232, 0.5); }
