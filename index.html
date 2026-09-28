@@ -56,13 +56,16 @@
         <a class="brand" href="#top" aria-label="Mohamed Borhan home">
           <span>MB</span><b>Mohamed Borhan</b>
         </a>
-        <nav aria-label="Main navigation">
+        <nav id="site-navigation" aria-label="Main navigation">
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#certifications">Certifications</a>
           <a href="#education">Education</a>
         </nav>
-        <a class="contact-link" href="mailto:mohammedborhan0480@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
+        <div class="topbar-actions">
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation"><span></span><span></span></button>
+          <a class="contact-link" href="mailto:mohammedborhan0480@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
+        </div>
       </header>
 
       <section class="hero" aria-labelledby="hero-title">
@@ -166,13 +169,21 @@
             <p>Projects that combine technical problem-solving with practical operating outcomes.</p>
           </div>
           <div class="project-grid">
-            <article class="project-card">
-              <div class="project-top"><span>Product + Data</span><b>01</b></div>
-              <div class="project-diagram" aria-hidden="true"><i></i><i></i><i></i><span></span></div>
-              <h3>PlainSight — Public Trade Intelligence</h3>
-              <p>A public-filings research dashboard that organizes SEC and congressional trade disclosures, adds transparent context, and tracks post-filing outcomes without executing trades.</p>
-              <a class="project-link featured-project-link" href="https://mohamed-borhan.github.io/plainsight-trades/" target="_blank" rel="noreferrer">Visit the live PlainSight website <span aria-hidden="true">↗</span></a>
-              <div class="tags"><span>Data research</span><span>Scoring systems</span><span>Product design</span></div>
+            <article class="project-card project-card-featured">
+              <div class="project-showcase" aria-label="PlainSight product screenshots">
+                <img class="showcase-primary" src="assets/plainsight-signal-ledger.png" alt="PlainSight signal ledger showing disclosed insider purchases and context" width="1263" height="710" loading="lazy" decoding="async">
+                <img class="showcase-secondary" src="assets/plainsight-weekly-preview.png" alt="PlainSight weekly research preview with ranked public filings" width="1263" height="710" loading="lazy" decoding="async">
+              </div>
+              <div class="project-featured-content">
+                <div class="project-top"><span>Product + Data</span><b>01</b></div>
+                <h3>PlainSight — Public Trade Intelligence</h3>
+                <p>A public-filings research dashboard that organizes SEC and congressional trade disclosures, adds transparent context, and tracks post-filing outcomes without executing trades.</p>
+                <div class="project-actions">
+                  <a class="project-link featured-project-link" href="https://mohamed-borhan.github.io/plainsight-trades/" target="_blank" rel="noreferrer">Visit the live website <span aria-hidden="true">↗</span></a>
+                  <a class="project-link github-project-link" href="https://github.com/Mohamed-Borhan/plainsight-trades" target="_blank" rel="noreferrer">View the GitHub repository <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="tags"><span>Python</span><span>JavaScript</span><span>GitHub Actions</span><span>Public-data research</span></div>
+              </div>
             </article>
             <article class="project-card">
               <div class="project-top"><span>Mechanical Design</span><b>02</b></div>
